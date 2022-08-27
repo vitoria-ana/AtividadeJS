@@ -1,0 +1,36 @@
+<html>
+<head>
+
+<title>Sistema de Notas</title>
+
+</head>
+<body>
+
+<form name = "classificarnota">
+
+Digite a nota do aluno: <input type = "text" name = "notaAluno"><br>
+<br>
+<input type = "button" value = "Ver resultado" onClick = "nota()">
+<br><br>
+<input type = "text" name = "saida" size = "50">
+
+</form>
+
+<script language = "javascript">
+
+let a, resultado;
+function nota() {
+a = parseFloat(document.classificarnota.notaAluno.value);
+
+if (a <38) {
+        resultado = 'O aluno está reprovado.';}
+
+else if ((a - (a + 5)) < 3) {
+        resultado = 'O aluno está aprovado.';}
+
+document.classificarnota.saida.value = resultado;
+}
+
+</script>
+</body>
+</html>

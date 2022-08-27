@@ -1,0 +1,44 @@
+<html>
+<head>
+
+<title>Lista de Números</title>
+
+</head>
+<body>
+
+<form name = "LuidyMoura">
+
+Digite o valor de entrada: <input type = "text" name = "valorEntrada"><br>
+<br>
+<input type = "button" value = "Ver lista" onClick = "lista()">
+<br><br>
+<input type = "text" name = "saida" size = "50">
+
+</form>
+
+<script language = "javascript">
+
+let a, resultado;
+function lista() {
+a = parseFloat(document.LuidyMoura.valorEntrada.value);
+
+for(let i = 0; i < a; i+=1){
+	if(i % 5 == 0){
+                document.write('Luidy <br/><br/> ');}
+	if(i % 9 == 0){
+		document.write('Moura <br/><br/> ');}
+	if(i % 5 == 0 && i % 9 == 0){
+		document.write('LuidyMoura <br/><br/> ');
+	}
+	else{
+		document.write(i);
+	}
+	
+    }
+
+document.LuidyMoura.saida.value = resultado;
+}
+
+</script>
+</body>
+</html>

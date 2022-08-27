@@ -1,0 +1,41 @@
+<html>
+<head>
+
+<title>Classificação de Triângulos</title>
+
+</head>
+<body>
+
+<form name = "classificarTriangulo">
+
+Digite o valor do lado A: <input type = "text" name = "ladoA"><br>
+Digite o valor do lado B: <input type = "text" name = "ladoB"><br>
+Digite o valor do lado C: <input type = "text" name = "ladoC"><br>
+<br>
+<input type = "button" value = "Ver resultado" onClick = "triangulo()">
+<br><br>
+<input type = "text" name = "saida" size = "50">
+
+</form>
+
+<script language="javascript">
+
+let a, b, c, resultado;
+function triangulo() {
+a = parseFloat(document.classificarTriangulo.ladoA.value);
+b = parseFloat(document.classificarTriangulo.ladoB.value);
+c = parseFloat(document.classificarTriangulo.ladoC.value);
+
+if (a == b && b == c)  {
+resultado = 'A figura é um triângulo equilátero.';}
+else if (a==b || a==c || c==b) {
+resultado = 'A figura é um triângulo isósceles.';}
+else {
+resultado = 'A figura é um triângulo escaleno.';}
+
+document.classificarTriangulo.saida.value = resultado;
+}
+
+</script>
+</body>
+</html>
